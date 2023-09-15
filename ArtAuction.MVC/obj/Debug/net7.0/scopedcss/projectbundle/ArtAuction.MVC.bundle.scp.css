@@ -1,0 +1,49 @@
+/* _content/ArtAuction.MVC/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-azg09bggxi] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-azg09bggxi] {
+  color: #0077cc;
+}
+
+.btn-primary[b-azg09bggxi] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-azg09bggxi], .nav-pills .show > .nav-link[b-azg09bggxi] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-azg09bggxi] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-azg09bggxi] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-azg09bggxi] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-azg09bggxi] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-azg09bggxi] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

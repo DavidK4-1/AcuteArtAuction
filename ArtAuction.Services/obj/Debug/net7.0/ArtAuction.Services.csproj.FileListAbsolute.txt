@@ -1,0 +1,17 @@
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Services\obj\Debug\net7.0\ArtAuction.Services.csproj.AssemblyReference.cache
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Services\obj\Debug\net7.0\ArtAuction.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Services\obj\Debug\net7.0\ArtAuction.Services.AssemblyInfoInputs.cache
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Services\obj\Debug\net7.0\ArtAuction.Services.AssemblyInfo.cs
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Services\obj\Debug\net7.0\ArtAuction.Services.csproj.CoreCompileInputs.cache
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Services\bin\Debug\net7.0\ArtAuction.Services.deps.json
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Services\bin\Debug\net7.0\ArtAuction.Services.dll
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Services\bin\Debug\net7.0\ArtAuction.Services.pdb
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Services\bin\Debug\net7.0\ArtAuction.Data.dll
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Services\bin\Debug\net7.0\ArtAuction.Models.dll
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Services\bin\Debug\net7.0\ArtAuction.Data.pdb
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Services\bin\Debug\net7.0\ArtAuction.Models.pdb
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Services\obj\Debug\net7.0\ArtAuction.Services.csproj.CopyComplete
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Services\obj\Debug\net7.0\ArtAuction.Services.dll
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Services\obj\Debug\net7.0\refint\ArtAuction.Services.dll
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Services\obj\Debug\net7.0\ArtAuction.Services.pdb
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Services\obj\Debug\net7.0\ref\ArtAuction.Services.dll

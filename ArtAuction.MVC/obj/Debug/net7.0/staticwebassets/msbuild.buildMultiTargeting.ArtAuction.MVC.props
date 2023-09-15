@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ArtAuction.MVC.props" />
+</Project>

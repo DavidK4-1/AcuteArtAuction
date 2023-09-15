@@ -1,0 +1,11 @@
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Models\bin\Debug\net7.0\ArtAuction.Models.deps.json
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Models\bin\Debug\net7.0\ArtAuction.Models.dll
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Models\bin\Debug\net7.0\ArtAuction.Models.pdb
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Models\obj\Debug\net7.0\ArtAuction.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Models\obj\Debug\net7.0\ArtAuction.Models.AssemblyInfoInputs.cache
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Models\obj\Debug\net7.0\ArtAuction.Models.AssemblyInfo.cs
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Models\obj\Debug\net7.0\ArtAuction.Models.csproj.CoreCompileInputs.cache
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Models\obj\Debug\net7.0\ArtAuction.Models.dll
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Models\obj\Debug\net7.0\refint\ArtAuction.Models.dll
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Models\obj\Debug\net7.0\ArtAuction.Models.pdb
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.Models\obj\Debug\net7.0\ref\ArtAuction.Models.dll
