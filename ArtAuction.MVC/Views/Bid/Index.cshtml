@@ -1,0 +1,29 @@
+﻿@model List<ArtAuction.Models.BidVM.BidListItem> 
+@{
+    ViewData["Title"] = "Artwork's bids";
+}
+<div class="d-flex flex-wrap justify-content-between align-items-baseline">
+    <h1>All Bids</h1>
+    <a asp-controller="Artwork" asp-action="Index" class="btn btn-sm btn-success">Back to Artwork</a>
+    <a asp-controller="Bid" asp-action="Create" class="btn btn-sm btn-success">Place a Bid</a>
+</div>
+
+<table class="table table-striped border">
+    <thead>
+        <tr>
+            <th>DatePlaced</th>
+            <th>Name</th>
+            <th>Payment</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model is not null)
+            @foreach (var bid in Model) {
+                <tr>
+                    <td>@bid.DatePlaced</td>
+                    <td>@bid.Name</td>
+                    <td>@bid.Payment</td>
+                </tr>
+            }
+    </tbody>
+</table>

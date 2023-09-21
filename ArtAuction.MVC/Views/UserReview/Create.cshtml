@@ -1,0 +1,31 @@
+﻿@model ArtAuction.Models.UserReviewVM.UserReviewCreate
+@{
+    ViewData["Title"] = "Post User Review";
+}
+
+@if (TempData["ErrorMsg"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Error</strong> @TempData["ErrorMsg"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<form asp-action="Create" method="post" class="row g-3">
+    <div class="col-md-6">
+        <label asp-for="@Model.Title" class="form-label"></label>
+        <input asp-for="@Model.Title" class="form-control" />
+    </div>
+    <div class="col-md-6">
+        <label asp-for="@Model.Contents" class="form-label"></label>
+        <input asp-for="@Model.Contents" class="form-control" />
+    </div>
+    <div class="col-md-6">
+        <label asp-for="@Model.Rating" class="form-label"></label>
+        <input asp-for="@Model.Rating" class="form-control" />
+    </div>
+    <div class="col d-flex justify-content-between align-items-baseline">
+        <a asp-controller="Artwork" asp-action="Index">Back to Artwork</a>
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>

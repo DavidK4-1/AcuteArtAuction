@@ -1,11 +1,22 @@
-using ArtAuction.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+
+using ArtAuction.Data;
+using ArtAuction.Services.ArtworkServ;
+using ArtAuction.Services.BidServ;
+using ArtAuction.Services.GenreServ;
+using ArtAuction.Services.UserReviewServ;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("ArtAuctionDB") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+builder.Services.AddScoped<IArtworkService, ArtworkService>();
+builder.Services.AddScoped<IBidService, BidService>();
+builder.Services.AddScoped<IGenreService, GenreService>();
+builder.Services.AddScoped<IUserReviewService, UserReviewService>();
+
+// Add services to the container.
+var connectionString = builder.Configuration.GetConnectionString("ArtAuctionDB") ?? throw new InvalidOperationException("Connection string not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
@@ -37,7 +48,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Artwork}/{action=All}/{id?}");
 app.MapRazorPages();
 
 app.Run();

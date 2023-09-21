@@ -1,0 +1,44 @@
+﻿@model List<ArtAuction.Models.ArtworkVM.ArtworkListItem>
+@{
+    string name = User.Identity?.Name ?? "error";
+    ViewData["Title"] = $"{name} portfolio";
+}
+
+<div class="d-flex flex-wrap justify-content-between align-items-baseline">
+    <h1>@name's Portfolio</h1>
+    <a asp-controller="Artwork" asp-action="Create" class="btn btn-sm btn-success">Artwork creator</a>
+</div>
+
+<table class="table table-striped border">
+    <thead>
+        <tr>
+            <th>Finish date</th>
+            <th>user</th>
+            <th>art</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model is not null)
+            @foreach (var art in Model) {  
+                <tr>
+                    <td>@art.BiddingFinishDate</td>
+                    <td>
+                        <a class="nav-link text-decoration-none" asp-controller="UserReview" asp-action="Index" asp-route-id="@art.UserName">@art.UserName</a>
+                    </td>
+                    <td>
+                        <a class="nav-link text-decoration-none" asp-action="Detail" asp-route-id="@art.Id">@art.Name</a>
+                    </td>
+                    <td>
+                        @*
+                        <a asp-controller="Bid" asp-action="Create" asp-route-id="@art.Id" class="btn btn-sm btn-success">Place a Bid</a>
+                        <a asp-controller="UserReview" asp-action="Create" asp-route-id="@art.UserName" class="btn btn-sm btn-success">Review Artist</a>
+                        *@
+                        <a asp-controller="Bid" asp-action="Index" asp-route-id="@art.Id" class="btn btn-sm btn-success">View Bids</a>
+                    </td>
+                    
+                </tr>
+                
+            }
+    </tbody>
+</table>

@@ -1,0 +1,30 @@
+﻿@model List<ArtAuction.Models.UserReviewVM.UserReviewListItem>
+@{
+    string name = User.Identity?.Name ?? "error";
+    ViewData["Title"] = $"reviews of {name}";
+}
+
+<div class="d-flex flex-wrap justify-content-between align-items-baseline">
+    <h1>impressions of @name</h1>
+    <a asp-controller="Artwork" asp-action="Index" class="btn btn-sm btn-success">Back to Artwork</a>
+</div>
+
+<table class="table table-striped border">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Contents</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model is not null)
+            @foreach (var review in Model) {
+                <tr>
+                    <td>@review.Title</td>
+                    <td>@review.Contents</td>
+                    <td>@review.Rating</td>
+                </tr>
+            }
+    </tbody>
+</table>

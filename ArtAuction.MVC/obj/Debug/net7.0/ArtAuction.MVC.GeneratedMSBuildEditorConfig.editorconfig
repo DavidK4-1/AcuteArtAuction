@@ -20,6 +20,38 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/ELEVENFIFTYPROJECTS/codingFoundations/RedBadgeProject2/ArtAuction/ArtAuction.MVC/Views/Artwork/All.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0d29ya1xBbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ELEVENFIFTYPROJECTS/codingFoundations/RedBadgeProject2/ArtAuction/ArtAuction.MVC/Views/Artwork/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0d29ya1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ELEVENFIFTYPROJECTS/codingFoundations/RedBadgeProject2/ArtAuction/ArtAuction.MVC/Views/Artwork/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0d29ya1xEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ELEVENFIFTYPROJECTS/codingFoundations/RedBadgeProject2/ArtAuction/ArtAuction.MVC/Views/Artwork/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0d29ya1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ELEVENFIFTYPROJECTS/codingFoundations/RedBadgeProject2/ArtAuction/ArtAuction.MVC/Views/Bid/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlkXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ELEVENFIFTYPROJECTS/codingFoundations/RedBadgeProject2/ArtAuction/ArtAuction.MVC/Views/Bid/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ELEVENFIFTYPROJECTS/codingFoundations/RedBadgeProject2/ArtAuction/ArtAuction.MVC/Views/Genre/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VucmVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ELEVENFIFTYPROJECTS/codingFoundations/RedBadgeProject2/ArtAuction/ArtAuction.MVC/Views/Genre/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VucmVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/ELEVENFIFTYPROJECTS/codingFoundations/RedBadgeProject2/ArtAuction/ArtAuction.MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,6 +70,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/ELEVENFIFTYPROJECTS/codingFoundations/RedBadgeProject2/ArtAuction/ArtAuction.MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ELEVENFIFTYPROJECTS/codingFoundations/RedBadgeProject2/ArtAuction/ArtAuction.MVC/Views/UserReview/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclJldmlld1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ELEVENFIFTYPROJECTS/codingFoundations/RedBadgeProject2/ArtAuction/ArtAuction.MVC/Views/UserReview/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclJldmlld1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/ELEVENFIFTYPROJECTS/codingFoundations/RedBadgeProject2/ArtAuction/ArtAuction.MVC/Views/_ViewImports.cshtml]

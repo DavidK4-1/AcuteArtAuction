@@ -1,0 +1,54 @@
+﻿@model List<ArtAuction.Models.ArtworkVM.ArtworkListItem>
+@{
+    ViewData["Title"] = "Genre's artworks";
+    var genreList = ViewData["Genres"] as List<ArtAuction.Models.GenreVM.GenreListItem>;
+}
+
+<div class="d-flex flex-wrap justify-content-between align-items-baseline">
+    <h1>Genre's Artworks</h1>
+    <a class="btn btn-sm btn-success" asp-area="" asp-controller="Genre" asp-action="Create">Create Genre</a>
+
+</div>
+
+@if (genreList is not null) {
+    <div>
+        <select onchange="document.location.href=this.value">
+            <option> -- change genre -- </option>
+            @foreach (var genre in genreList)
+            {
+                <option value="@Url.Action("Index", new {id = genre.Id})"> @genre.Name </option>
+            }
+        </select>
+    </div>
+}
+
+<table class="table table-striped border">
+    <thead>
+        <tr>
+            <th>Finish date</th>
+            <th>user</th>
+            <th>art</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model is not null)
+            @foreach (var art in Model) {
+                <tr>
+                    <td>@art.BiddingFinishDate</td>
+                    <td>
+                        <a class="nav-link text-decoration-none" asp-controller="UserReview" asp-action="Index" asp-route-id="@art.UserName" class="btn btn-sm btn-success">@art.UserName</a>
+                    </td>
+                    <td>
+                        <a class="nav-link text-decoration-none" asp-action="Detail" asp-route-id="@art.Id">@art.Name</a>
+                    </td>
+                    <td>
+                        <a asp-controller="Bid" asp-action="Create" asp-route-id="@art.Id" class="btn btn-sm btn-success">Place a Bid</a>
+                        <a asp-controller="Bid" asp-action="Index" asp-route-id="@art.Id" class="btn btn-sm btn-success">View Bids</a>
+                        <a asp-controller="UserReview" asp-action="Create" asp-route-id="@art.UserName" class="btn btn-sm btn-success">Review Artist</a>
+                    </td>
+
+                </tr>
+            }
+    </tbody>
+</table>

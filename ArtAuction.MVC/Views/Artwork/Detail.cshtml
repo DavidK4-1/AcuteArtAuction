@@ -1,0 +1,33 @@
+﻿@model ArtAuction.Models.ArtworkVM.ArtworkDetail;
+@{
+    ViewData["Title"] = "Details";
+}
+
+<dl class="row">
+    <dt>
+        @Html.DisplayNameFor(model => model.Name)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Name)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.DateCompleted)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.DateCompleted)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Genres)
+    </dt>
+    <dd>
+        @foreach(var g in Model.Genres) {
+            <p><a asp-controller="Genre" asp-action="Index" asp-route-id="@g.Id">@g.Name</a></p> @*need to link*@
+        }
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.BiddingFinishDate)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.BiddingFinishDate)
+    </dd>
+</dl>

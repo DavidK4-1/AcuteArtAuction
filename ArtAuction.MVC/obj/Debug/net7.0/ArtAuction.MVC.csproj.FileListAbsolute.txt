@@ -88,3 +88,11 @@ D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.
 D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.MVC\obj\Debug\net7.0\ArtAuction.MVC.pdb
 D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.MVC\obj\Debug\net7.0\ArtAuction.MVC.genruntimeconfig.cache
 D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.MVC\obj\Debug\net7.0\ref\ArtAuction.MVC.dll
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.MVC\obj\Debug\net7.0\ArtAuction.MVC.MvcApplicationPartsAssemblyInfo.cs
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.MVC\bin\Debug\net7.0\System.Web.Mvc.dll
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.MVC\bin\Debug\net7.0\System.Web.Razor.dll
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.MVC\bin\Debug\net7.0\System.Web.Helpers.dll
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.MVC\bin\Debug\net7.0\System.Web.WebPages.Deployment.dll
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.MVC\bin\Debug\net7.0\System.Web.WebPages.Razor.dll
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.MVC\bin\Debug\net7.0\System.Web.WebPages.dll
+D:\ELEVENFIFTYPROJECTS\codingFoundations\RedBadgeProject2\ArtAuction\ArtAuction.MVC\bin\Debug\net7.0\Microsoft.Web.Infrastructure.dll

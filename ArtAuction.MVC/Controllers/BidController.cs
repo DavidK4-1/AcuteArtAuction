@@ -14,8 +14,8 @@ public class BidController : Controller {
         _service = service;
     }
 
-    public IActionResult Index() {
-        return View();
+    public async Task<IActionResult> Index(int id) {
+        return View(await _service.GetAllBidsForArtworkAsync(id));
     }
 
     public IActionResult Create() {
@@ -23,9 +23,11 @@ public class BidController : Controller {
     }
 
     [HttpPost, ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(BidCreate model) {
-        if (!await _service.CreateBidAsync(model))
+    public async Task<IActionResult> Create(int id, BidCreate model) {
+        if (!await _service.CreateBidAsync(id, model)) {
             TempData["ErrorMsg"] = "cannot set bid on artwork";
-        return View(model); 
+            return View(model);
+        }
+        return RedirectToAction(nameof(Index));
     }
 }

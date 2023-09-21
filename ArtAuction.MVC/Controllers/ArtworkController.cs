@@ -6,7 +6,6 @@ using ArtAuction.Models.ArtworkVM;
 
 namespace ArtAuction.Controllers;
 
-//[Authorize] // dono how this is gonna work, uncomment later
 public class ArtworkController : Controller {
     private readonly IArtworkService _service;
 
@@ -14,14 +13,27 @@ public class ArtworkController : Controller {
         _service = service;
     }
 
-    public IActionResult Index() {
+    [Authorize]
+    public async Task<IActionResult> Index() {
+        return View(await _service.GetAllArtworkRelatedToUserAsync());
+    }
+
+    public async Task<IActionResult> All() {
+        return View(await _service.GetAllArtworkAsync());
+    }
+
+    [Authorize]
+    public async Task<IActionResult> Detail(int id) {
+        return View(await _service.GetArtworkByIdAsync(id));
+    }
+
+    [Authorize]
+    public async Task<IActionResult> Create() {
+        ViewData["Genres"] = await _service.GetFullGenreSelectionAsync();
         return View();
     }
 
-    public IActionResult Create() {
-        return View();
-    }
-
+    [Authorize]
     [HttpPost, ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(ArtworkCreate model) {
         switch (await _service.CreateArtworkAsync(model)) {
@@ -30,6 +42,7 @@ public class ArtworkController : Controller {
             case false:
                 TempData["ErrorMsg"] = "not all genres were added"; return View(model);
         }
+
         return RedirectToAction(nameof(Index));
     }
 }
