@@ -36,7 +36,6 @@ public class UserReviewService : IUserReviewService {
             Title = model.Title,
             Contents = model.Contents,
             Rating = model.Rating,
-            //UserId = model.UserId
             UserId = user.Id
         };
 
@@ -56,13 +55,4 @@ public class UserReviewService : IUserReviewService {
             Rating = r.Rating
         }).ToListAsync();
         }
-    /*
-    public async Task<List<UserReviewListItem>?> GetCurrentUsersUserReviews() 
-        => await  _ctx.UserReviews.Where(r => r.UserId == _id).Select(r => new UserReviewListItem() {
-            UserName = r.UserName,
-            Title = r.Title,
-            Contents = r.Contents,
-            Rating = r.Rating
-        }).ToListAsync();
-    */
 }

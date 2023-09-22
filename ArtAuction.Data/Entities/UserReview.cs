@@ -18,5 +18,5 @@ public class UserReview {
 
     [ForeignKey(nameof(User))]
     public string UserId { get; set; } = Guid.NewGuid().ToString();
-    public IdentityUser User { get; set; } = null!; // look to see if this gets the user
+    public IdentityUser User { get; set; } = null!; 
 }

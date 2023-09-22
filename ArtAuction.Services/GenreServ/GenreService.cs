@@ -21,18 +21,6 @@ public class GenreService : IGenreService {
         };
         _ctx.Genres.Add(entity);
 
-        /*
-        if (await _ctx.SaveChangesAsync() != 1)
-            return null;
-        var genre = _ctx.Genres.Entry(entity);
-        foreach (var key in model.ArtworkKeys) { 
-            var artwork = await _ctx.Artworks.FindAsync(key);
-            if (artwork is not null)
-                genre.Entity.Artworks.Add(artwork);
-        }
-
-        return await _ctx.SaveChangesAsync() == model.ArtworkKeys.Count;
-        */
         return await _ctx.SaveChangesAsync() == 1;
     }
 

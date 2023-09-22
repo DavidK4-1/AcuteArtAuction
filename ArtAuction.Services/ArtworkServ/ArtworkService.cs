@@ -8,7 +8,6 @@ using ArtAuction.Data.Entities;
 
 namespace ArtAuction.Services.ArtworkServ;
 
-//controller will have authorize
 public class ArtworkService : IArtworkService{
     private readonly ApplicationDbContext _ctx;
     private readonly UserManager<IdentityUser> _mgr;
