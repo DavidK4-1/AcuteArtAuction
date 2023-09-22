@@ -1,8 +1,8 @@
 ﻿namespace ArtAuction.Models.UserReviewVM;
 
-public class UserReviewCreate {
+public class UserReviewListItem {
+    public double Rating { get; set; }
+    public string UserName { get; set; } = string.Empty;
     public string Title { get; set; } = string.Empty;
     public string Contents { get; set; } = string.Empty;
-    //public string UserId { get; set; } = string.Empty;
-    public int Rating { get; set; }
 }

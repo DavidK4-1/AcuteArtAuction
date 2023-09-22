@@ -3,6 +3,7 @@
 using ArtAuction.Data;
 using ArtAuction.Models.BidVM;
 using ArtAuction.Data.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace ArtAuction.Services.BidServ;
 
@@ -24,15 +25,15 @@ public class BidService : IBidService {
             _id = mgr.GetUserId(user);
     }
 
-    public async Task<bool> CreateBidAsync(BidCreate model) {
+    public async Task<bool> CreateBidAsync(int id, BidCreate model) {
         // might need a null check 
-        if ((await _ctx.Artworks.FindAsync(model.ArtworkId))?.BiddingFinishDate < DateTime.Now || _id is null)
+        if ((await _ctx.Artworks.FindAsync(id))?.BiddingFinishDate < DateTime.Now || _id is null)
             return false;
 
         Bid entity = new() { 
             Name = (await _ctx.Users.FindAsync(_id))?.UserName??"error",
             Address = model.Address,
-            ArtworkId = model.ArtworkId,
+            ArtworkId = id,
             DatePlaced = DateTime.Now,
             Payment = model.Payment
         };
@@ -40,4 +41,12 @@ public class BidService : IBidService {
         _ctx.Bids.Add(entity);
         return await _ctx.SaveChangesAsync() == 1;
     }
+
+    public async Task<List<BidListItem>?> GetAllBidsForArtworkAsync(int artworkId)
+        => await _ctx.Bids.Where(b => b.ArtworkId == artworkId).Select(b => new BidListItem() {
+            ArtworkId = b.ArtworkId,
+            Name = b.Name,
+            DatePlaced = b.DatePlaced,
+            Payment = b.Payment
+        }).ToListAsync();
 }

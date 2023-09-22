@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 using ArtAuction.Data;
 using ArtAuction.Models.ArtworkVM;
-using Microsoft.EntityFrameworkCore;
 using ArtAuction.Models.GenreVM;
+using ArtAuction.Data.Entities;
 
 namespace ArtAuction.Services.ArtworkServ;
 
@@ -30,15 +31,16 @@ public class ArtworkService : IArtworkService{
         if (_id is null)
             return null;
 
-        Data.Entities.Artwork entity = new() {
+        Artwork entity = new() {
             Description = model.Description,
             Name = model.Name,
             DateCompleted = model.CompletionDate,
-            BiddingFinishDate = DateTime.Now.AddDays(5),
+            //have to change it by hand, but whatever for now
+            BiddingFinishDate = DateTime.Now.AddDays(1),
             UserId = _id
         };
         _ctx.Artworks.Add(entity);
-
+        
         if (await _ctx.SaveChangesAsync() != 1)
             return null;
 
@@ -52,6 +54,29 @@ public class ArtworkService : IArtworkService{
         return await _ctx.SaveChangesAsync() == model.GenreKeys.Count;
     }
 
+    public async Task<List<ArtworkListItem>?> GetAllArtworkRelatedToUserAsync()
+        => await _ctx.Artworks.Include(a => a.User).Where(a => a.UserId == _id).Select(a => new ArtworkListItem() { 
+            Id = a.Id,
+            Name = a.Name,
+            UserName = a.User.UserName ?? "error",
+            BiddingFinishDate = a.BiddingFinishDate
+        }).ToListAsync();
+
+    public async Task<List<ArtworkListItem>?> GetAllArtworkAsync()
+        => await _ctx.Artworks.Include(a => a.User).Select(a => new ArtworkListItem(){
+            Id = a.Id,
+            Name = a.Name,
+            UserName = a.User.UserName ?? "error",
+            BiddingFinishDate = a.BiddingFinishDate
+        }).ToListAsync();
+
+    public async Task<List<GenreListItem>> GetFullGenreSelectionAsync()
+        => await _ctx.Genres.Select(g => new GenreListItem() {
+            Id = g.Id,
+            Name = g.Name,
+            Description = g.Description,
+        }).ToListAsync();
+
     public async Task<ArtworkDetail?> GetArtworkByIdAsync(int Id) {
         var art = await _ctx.Artworks.Include(a => a.Genres).FirstOrDefaultAsync(a => a.Id == Id);
         return art is null  
@@ -62,6 +87,7 @@ public class ArtworkService : IArtworkService{
         DateCompleted = art.DateCompleted,
         BiddingFinishDate = art.BiddingFinishDate,
         Genres = art.Genres.Select(g => new GenreListItem() { // consider getting only the names, is the description really a string .Select(g => g.Name).ToList()
+                    Id = g.Id,
                     Name = g.Name,
                     Description = g.Description
                }).ToList(),
