@@ -22,7 +22,6 @@ public class ArtworkController : Controller {
         return View(await _service.GetAllArtworkAsync());
     }
 
-    [Authorize]
     public async Task<IActionResult> Detail(int id) {
         return View(await _service.GetArtworkByIdAsync(id));
     }
