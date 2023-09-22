@@ -6,7 +6,7 @@ using ArtAuction.Services.BidServ;
 
 namespace ArtAuction.Controllers;
 
-//[Authorize] // dono how this is gonna work, uncomment later
+[Authorize] // dono how this is gonna work, uncomment later
 public class BidController : Controller {
     private readonly IBidService _service;
 
@@ -24,10 +24,14 @@ public class BidController : Controller {
 
     [HttpPost, ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(int id, BidCreate model) {
+        if (!ModelState.IsValid) {
+            TempData["ErrorMsg"] = "cannot set bid on artwork";
+            return View(model);
+        }
         if (!await _service.CreateBidAsync(id, model)) {
             TempData["ErrorMsg"] = "cannot set bid on artwork";
             return View(model);
         }
-        return RedirectToAction(nameof(Index));
+        return RedirectToAction("All", "Artwork");
     }
 }

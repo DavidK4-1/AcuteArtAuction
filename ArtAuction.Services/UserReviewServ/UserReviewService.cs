@@ -4,7 +4,6 @@ using ArtAuction.Data;
 using ArtAuction.Models.UserReviewVM;
 using ArtAuction.Data.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic;
 
 namespace ArtAuction.Services.UserReviewServ;
 

@@ -25,6 +25,10 @@ public class GenreController : Controller {
 
     [HttpPost, ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(GenreCreate model) {
+        if (!ModelState.IsValid) {
+            TempData["ErrorMsg"] = "Failed to create Genre";
+            return View(model);
+        }
         if (!await _service.CreateGenreAsync(model)) {
             TempData["ErrorMsg"] = "Failed to create Genre";
             return View(model);

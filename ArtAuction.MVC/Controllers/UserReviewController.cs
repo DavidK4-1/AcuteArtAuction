@@ -2,9 +2,11 @@
 
 using ArtAuction.Services.UserReviewServ;
 using ArtAuction.Models.UserReviewVM;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ArtAuction.Controllers;
 
+[Authorize]
 public class UserReviewController : Controller {
     private readonly IUserReviewService _service;
 
@@ -26,6 +28,6 @@ public class UserReviewController : Controller {
             TempData["ErrorMsg"] = "Failed to create Genre";
             return View(model);
         }
-        return RedirectToAction(nameof(Index));
+        return RedirectToAction("All", "Artwork");
     } 
 }

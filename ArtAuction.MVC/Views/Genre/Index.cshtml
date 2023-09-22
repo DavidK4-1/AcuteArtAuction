@@ -40,7 +40,7 @@
                         <a class="nav-link text-decoration-none" asp-controller="UserReview" asp-action="Index" asp-route-id="@art.UserName" class="btn btn-sm btn-success">@art.UserName</a>
                     </td>
                     <td>
-                        <a class="nav-link text-decoration-none" asp-action="Detail" asp-route-id="@art.Id">@art.Name</a>
+                        <a class="nav-link text-decoration-none" asp-controller="Artwork" asp-action="Detail" asp-route-id="@art.Id">@art.Name</a>
                     </td>
                     <td>
                         <a asp-controller="Bid" asp-action="Create" asp-route-id="@art.Id" class="btn btn-sm btn-success">Place a Bid</a>
