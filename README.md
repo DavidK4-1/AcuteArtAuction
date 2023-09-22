@@ -39,15 +39,28 @@ Create Genre:
 1. create a account (*you can view all Artworks and Artwork Details without an account*)
 2. create a genre
 3. create an artwork that links to the genre
-4. view artwork
+4. view portfolio artwork
+5. create another account
+6. 
 
 ## Controller Requests
 
 ### User
+	- create
+	- update
+	- delete
 ### Genre
+	- create
+	- read
 ### Artwork
-### 
-### 
+	- create
+	- read
+### Bid
+	- create 
+	- read
+### UserReview
+	- create
+	- read
 
 ## Technologies
 
